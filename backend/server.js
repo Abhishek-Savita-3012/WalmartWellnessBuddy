@@ -4,6 +4,8 @@ import mongoose from 'mongoose';
 import generateChatResponse from './routes/chatAi.js'; 
 import authRoutes from './routes/auth.js';
 import mealSearchRoute from './routes/mealSearch.js'; 
+import dotenv from 'dotenv';
+dotenv.config(); 
 
 const app = express();
 
@@ -29,5 +31,5 @@ app.post('/api/chat', async (req, res) => {
 
 app.use('/api/meals', mealSearchRoute);
 
-const PORT = 5000; 
+const PORT = process.env.PORT; 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
