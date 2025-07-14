@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 
-const TOGETHER_AI_API_KEY = '2e58b40d614daa2548fedb888ba701982e1c1f28cc73ad01132b2ea3cdee6e45';
+const TOGETHER_AI_API_KEY = 'process.env.TOGETHER_AI_API_KEY';
 
 if (!TOGETHER_AI_API_KEY) {
   console.error("TOGETHER_AI_API_KEY is not set.");
