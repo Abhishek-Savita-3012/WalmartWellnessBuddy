@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Walmart Wellness Buddy</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Login and Signup Section -->
+    <div id="authSection">
+        <div id="signupForm">
+            <h2>Signup</h2>
+            <input type="text" id="signupName" placeholder="Name" required />
+            <input type="email" id="signupEmail" placeholder="Email" required />
+            <input type="password" id="signupPassword" placeholder="Password" required />
+            <button onclick="handleSignup()">Signup</button>
+        </div>
+
+        <div id="loginForm">
+            <h2>Login</h2>
+            <input type="email" id="loginEmail" placeholder="Email" required />
+            <input type="password" id="loginPassword" placeholder="Password" required />
+            <button onclick="handleLogin()">Login</button>
+        </div>
+    </div>
+
+    <!-- Chatbot Section -->
+    <div class="chat-container hidden" id="chat-section">
+        <header>
+            <h1>Walmart Wellness Buddy</h1>
+            <p>Ask about meals, diet plans, or grocery suggestions</p>
+        </header>
+
+        <main id="chat-messages"></main>
+
+        <footer>
+            <input type="text" id="userInput" placeholder="Type your prompt here..." />
+            <button onclick="sendMessage()">Send</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="authentication.js"></script>
+</body>
+
+</html>
