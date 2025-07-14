@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 
 const router = express.Router();
 
-const SERP_API_KEY = 'a9e160d8f3521118f5ab21e09aa89b94fdab9a5f7c1979dda9ee3ff82fa2fce5';
+const SERP_API_KEY = 'process.env.SERP_API_KEY';
 
 async function searchWalmartTopItems(originalIngredientName) {
     let queryForWalmart = originalIngredientName; 
